@@ -105,6 +105,7 @@ class TodoList {
 
     removeTask(index) {
         this.validateIndex(index);
+        if (this.#tasks[index].isBlocked()) return;
         return this.#tasks.splice(index, 1);
     }
 
