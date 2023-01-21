@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ 
+        <title>DELT4D - TODO LIST</title>
+
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet" />
+
+        <link rel="stylesheet" href="assets/style.css" />
+    </head>
+
+    <body>
+        <form id="add-task-form">
+            <div id="task-form-content" class="center">
+                <label class="block" for="description">
+                    <h1>TO-DO LIST</h1>
+                </label>
+
+                <div class="control">
+                    <input id="description" type="text" name="description" />
+                    <button type="submit">Add Task</button>
+                </div>
+            </div>
+        </form>
+
+        <div id="todo-list">
+            <div class="item">
+                <span class="check">&#10003</span>
+                <span class="description"> Task list not working if you see this. Please, try reloading the page! </span>
+                <div class="lock"><span class="material-icons md">lock</span></div>
+                <span class="close">&times;</span>
+            </div>
+        </div>
+
+        <template id="template-todo-item">
+            <div class="item">
+                <span class="check">&#10003</span>
+                <span class="description"></span>
+                <div class="lock"></div>
+                <div class="close">&times;</div>
+            </div>
+        </template>
+
+        <script src="assets/todo.js"></script>
+        <script src="assets/index.js"></script>
+    </body>
+</html>

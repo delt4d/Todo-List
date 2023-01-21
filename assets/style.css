@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    font-family: Poppins, system-ui;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.block {
+    display: block;
+}
+
+.control {
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    min-height: 100vh;
+    background: #eee;
+}
+
+button,
+input {
+    border: none;
+    border-radius: 2px;
+    height: 2.4rem;
+}
+
+input {
+    outline: none;
+    width: 20rem;
+    padding-left: .7rem;
+    padding-right: .5rem;
+}
+
+button,
+input[type=button],
+input[type=submit],
+input[type=reset] {
+    width: auto;
+    min-width: 6rem;
+    padding: 0 1rem;
+    cursor: pointer;
+    background: #9461fb;
+    color: #fff;
+    transition: .1s ease background;
+}
+
+button:hover,
+input[type=button]:hover,
+input[type=submit]:hover,
+input[type=reset]:hover {
+    background: #6528e0;
+}
+
+button:active,
+input[type=button]:active,
+input[type=submit]:active,
+input[type=reset]:active {
+    background: #5a23c8;
+}
+
+#task-form-content {
+    padding: 5rem 0;
+    height: 10rem;
+}
+
+#task-form-content h1 {
+    font-weight: 500;
+    font-family: system-ui;
+    padding: 1rem;
+}
+
+#todo-list {
+    border-radius: 2px;
+    display: block;
+    margin: 0 auto 2rem;
+    width: clamp(20rem, 80vw, 80rem);
+    background-color: #ddd;
+}
+
+#todo-list .item {
+    height: 3rem;
+    display: grid;
+    grid-template-columns: 3rem 1fr 3rem 3rem;
+    align-items: center;
+    cursor: pointer;
+    transition: .2s ease background;
+}
+
+#todo-list .item>* {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#todo-list .item:hover {
+    background-color: #ccc;
+}
+
+#todo-list .item.checked {
+    color: #fff;
+    background-color: #888;
+}
+
+#todo-list .item.checked .description {
+    text-decoration: line-through;
+}
+
+#todo-list .item.checked .check {
+    visibility: visible;
+}
+
+#todo-list .item .check {
+    visibility: hidden;
+    font-size: 2rem;
+    color: #fff;
+}
+
+#todo-list .item .description {
+    justify-content: start;
+}
+
+#todo-list .item .close,
+#todo-list .item .lock {
+    color: #5a23c8;
+}
+
+#todo-list .item .check,
+#todo-list .item .close {
+    font-weight: 300;
+}
+
+#todo-list .item .close {
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+#todo-list .item .close:hover {
+    background-color: #f44336;
+}
+
+#todo-list .item .lock:hover {
+    background-color: #5a23c8;
+}
+
+#todo-list .item .close:hover,
+#todo-list .item .lock:hover,
+#todo-list .item.checked .close,
+#todo-list .item.checked .lock {
+    color: #fff;
+}
